@@ -24,19 +24,6 @@ if [[ "$installdep" =~ ^[Yy]$ ]]; then
 	
     echo -e "${LIGHT_BLUE}Rebuild and run a model :${RESET}"
 
-    cd /root/allora-huggingface-walkthrough/	
-    echo
-    docker compose up --build -d
-    echo
-	
-    echo
-    docker compose logs -f
-    echo
-	
-else
-    echo -e "${BRIGHT_GREEN}Operation Canceled :${RESET}"
-    
-fi
-
-echo
-echo -e "${MAGENTA}==============0xTnpxSGT | Allora===============${RESET}"
+    cd /root/basic-coin-prediction-node/	
+    chmod +x upgrade-model.sh
+./upgrade-model.sh
